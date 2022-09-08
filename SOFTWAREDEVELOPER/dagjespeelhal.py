@@ -12,4 +12,4 @@ bedragtijdVIP = totaaltijdVIP * y
 print(bedragtijdVIP)
 
 totalekosten = bedragtickets + bedragtijdVIP
-print('Totale Kosten: ', totalekosten )
+print('Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar', totalekosten, 'euro!' )
