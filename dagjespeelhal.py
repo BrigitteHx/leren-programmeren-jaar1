@@ -1,7 +1,7 @@
 # dagjespeelhal
 
-x = ticket = float(745)
-y = VIPveenmin = float(37 / 5)
+x = ticket = 745
+y = VIPveenmin = 37 / 5
 
 totaaltickets = int(input('Totaal Aantal Tickets: '))
 bedragtickets = totaaltickets * x
