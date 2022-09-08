@@ -1,7 +1,7 @@
 # dagjespeelhal
 
-x = ticket = float(7.45)
-y = VIPveenmin = float(0.37 / 5)
+x = ticket = float(745)
+y = VIPveenmin = float(37 / 5)
 
 totaaltickets = int(input('Totaal Aantal Tickets: '))
 bedragtickets = totaaltickets * x
@@ -12,4 +12,4 @@ bedragtijdVIP = totaaltijdVIP * y
 print('Totaal VIP-VR-GameSeat', bedragtijdVIP)
 
 totalekosten = bedragtickets + bedragtijdVIP
-print('Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar', {totalekosten} , 'euro!' )
+print('Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar', {totalekosten} , 'cent!' )
