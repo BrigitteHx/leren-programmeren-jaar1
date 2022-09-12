@@ -1,11 +1,17 @@
 # meten is weten
 
-a = int(input("Waarde A: "))
+a = int(input("Waarde A: ")) 
 b = int(input("Waarde B: "))
 
 if a > b: 
-    print("Waarde A is het grootst", a )
+    min = b 
+    max = a 
+    print("Het minimum is", min)
+    print("Het maximum is", max)
 elif a < b:
-    print("Waarde A is het kleints", a )
-else: a == b
-print("Waarde A en B zijn gelijk")
+    min = a 
+    max = b 
+    print("Het minimum is", min)
+    print("Het maximum is", max)
+else: a==b, print("A en B zijn gelijk")
+    
