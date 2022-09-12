@@ -14,7 +14,7 @@ while True :
 
 if keuzepizza == "Small" :
     hoeveelkleinepizza = int(input("You picked a \'Small\' pizzas how many would you like? "))
-    totalkleinepizza = hoeveelkleinepizza * smallpizza
+    totalkleinepizza = hoeveelkleinepizza * smallpizza 
     print(f'Your total will be {totalkleinepizza} Euros')
 
 
