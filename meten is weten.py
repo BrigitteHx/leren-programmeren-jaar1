@@ -5,5 +5,7 @@ b = int(input("Waarde B: "))
 
 if a > b: 
     print("Waarde A is het grootst", a )
-    
+elif a < b:
+    print("Waarde A is het kleints", a )
 
+    
