@@ -29,7 +29,4 @@ if vraag1 == "Ja" :
         else : 
             print("Goudse Kaas")
 
-       
-
-
-        
+         
