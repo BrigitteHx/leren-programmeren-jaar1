@@ -1,5 +1,8 @@
 # sollicitatie 2 
 
+from re import M
+
+
 print("Welkom bij de sollicitatie Circusdirecteur voor Circus HotelDeBotel, er zullen u een aantal vragen gesteld worden om te zien of u in aanmerking komt. Op basis van een puntensysteem zult u aan het einde van de vragenlijst niet of u in aanmerking komt. ")
 print("---------------------------------------------------------------------------------------------------------------------------------------------------")
 
@@ -8,10 +11,19 @@ score = 0
 
 while True :
     beginvraag = input("Heeft u praktijk ervaring op het gebied van \'Dressuur\', \'Jongleren\' of \'Acrobatiek\'? (Ja/ Nee) ")
-    if beginvraag in [ "Ja" , "Nee" ] :
+    if beginvraag in [ "Ja" ] :
         break
-
+    else : 
+        raise NameError("Je kunt hier niet werken.")        #error 1
 # vragen
+
+name = input("Wat is uw naam?")                             #error 2
+if name == "De Jong" and "Slemmer" :
+    raise NameError("Je bent hier niet welkom!")
+
+age = int(input("Wat is uw leeftijd?"))
+if age < 18:
+  raise Exception("Je moet ouder dan 18 zijn om hier te kunnen werken.")        #error 3
 
 welke_baan = input("Waar heeft u ervaring in? ")
 if welke_baan == "Dressuur" or "Jongleren" or "Acrobatiek" :
