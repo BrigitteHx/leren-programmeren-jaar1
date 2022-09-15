@@ -13,17 +13,17 @@ while True :
 
 
 if keuzepizza == "Small" :
-    hoeveelkleinepizza = int(input("You picked a \'Small\' pizzas how many would you like? "))
+    hoeveelkleinepizza = int(input("You picked a \'Small\' pizas how many would you like? "))
     totalkleinepizza = hoeveelkleinepizza * smallpizza 
     print(f'Your total will be {totalkleinepizza} Euros')
 
 
-if keuzepizza == "Medium" : 
+elif keuzepizza == "Medium" : 
     hoeveelheidmediumpizza = int(input("You picked a \'Medium\' pizzas how many would you like? "))
     totalmediumpizza = hoeveelheidmediumpizza * mediumpizza 
     print("Your total will be" , totalmediumpizza, "Euros")
 
-if keuzepizza == "Large" : 
+elif keuzepizza == "Large" : 
      hoeveelgrotepizza = int(input("You picked a \'Large\' pizzas how many would you like? "))
      totalgrotepizza = hoeveelgrotepizza * largepizza 
      print("Your total will be", totalgrotepizza , "Euros")
