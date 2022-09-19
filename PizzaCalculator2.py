@@ -12,7 +12,7 @@ score = +1
 while score == 1 :
     try: 
         aantal1 = int(input(f'How many small pizzas ({smallpizza}) would you like?'))
-        score = +2
+        score = 2
     except: 
         print('Please leave a correct answer and try again. ')
 
@@ -38,6 +38,4 @@ largepizzaprize = largepizza * aantal3
 
 totaal = smallpizzaprize + mediumpizzaprize + largepizzaprize
 
-if score == 4 :
-    print(f'Your total will be {totaal} euros. ')
-exit()
+print(f'Your total will be {totaal} euros. ')
