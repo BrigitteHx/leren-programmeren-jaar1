@@ -19,7 +19,7 @@ while True :
 
 name = input("Wat is uw naam?")                             #error 2
 if name == "De Jong" and "Slemmer" :
-    raise NameError("Je bent hier niet welkom!")
+    raise NameError("U bent hier niet welkom!")
 
 age = int(input("Wat is uw leeftijd?"))
 if age < 18:
@@ -38,6 +38,8 @@ if hoelang_ervaring == "Jongleren" > 5 :
         score = score + 1
 if hoelang_ervaring == "Acrobatiek" > 3 : 
         score = score + 1
+        # if waarde = ()
+        # waarde is True
 
 mbodiploma = input("Heeft u een MBO diploma? (Ja/Nee) ")
 if mbodiploma == "Ja" :
