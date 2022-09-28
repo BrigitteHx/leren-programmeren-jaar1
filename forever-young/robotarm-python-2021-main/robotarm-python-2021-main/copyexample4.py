@@ -1,7 +1,7 @@
 from RobotArm import RobotArm
 
 robotArm = RobotArm('exercise 4')
-robotArm.speed = (3)
+robotArm.speed = (2)
 
 # Jouw python instructies zet je vanaf hier:
 
