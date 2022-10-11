@@ -10,44 +10,54 @@ time.sleep(1)
 print("If you guess the number on time, you earn a point, with 20 points  you win the game!\n ")
 time.sleep(1)
 
-rounds = 1
+rounds = 0
 guesses = 0 
 score = 0 
 
-maxrounds = 21
+maxrounds = 5
 maxguesses = 10
+ 
 
-while rounds > 0 and rounds <= 21:
+while rounds <= maxrounds:
    number = random.randint(1, 1000)
    print(number)
-
+   print(f"Ronde nummer {rounds}")
+   guesses = 0 # voor ronde
    while True: # while van maken anders gaat hij 10 keer raden ook als je het al hebt
 
       guess = int(input("Which number do you think it is? \n ")) 
-      difference = number - guess
-      rounds = rounds + 1
+      difference = abs(number - guess) # absoluut verschil zonder - of + 
+   
    
       if guess > number: 
          print("Lower! \n")
-         guesses = guesses + 1
       if guess < number:
          print("Higher! \n")
-         guesses = guesses + 1
       if guess == number: # onderaan 
          print("You've guesses it! \n") 
          score = score + 1
-         guesses = guesses + 1
-      if difference < 20 or difference < -20 :
-         print("You're very close! \n")
-      if difference > 20 and difference < 50 or difference > -20 and difference < -50:
-         print("You're extremely close to the number! \n")
+      guesses = guesses + 1 # na guesses optellen (korter)
+      rounds = rounds + 1 
+      
       if guess == number or guesses == maxguesses:
          print("New round!")
          print(f"You have {score} points right now!\n ")
          break
-   if rounds == maxrounds:
-      if score == 20:
-         print(f"Congrats, you won with {score} points!")
-      else:
-         print(f"Game over! You have {score} points!")
-      break
+      elif difference < 20:
+         print("You're extremely close! \n")
+      elif difference < 50:  # elif = anders dan kleiner dan 20 
+         print("You're very close to the number! \n")
+      # na ronde
+
+   if rounds == maxrounds: # uit while dus niet nodig 
+         if score == 5:
+            print(f"Congrats, you won with {score} points!")
+         else:
+            print(f"Game over! You have {score} points!")
+         break  
+       
+       
+     
+
+
+# vaste waardes weghalen, geen break en conditie 
