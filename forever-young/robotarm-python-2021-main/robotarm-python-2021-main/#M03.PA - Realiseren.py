@@ -30,16 +30,16 @@ while rounds > 0 and rounds <= 21:
       if guess > number: 
          print("Lower! \n")
          guesses = guesses + 1
-      elif guess < number:
+      if guess < number:
          print("Higher! \n")
          guesses = guesses + 1
-      elif guess == number: # onderaan 
+      if guess == number: # onderaan 
          print("You've guesses it! \n") 
          score = score + 1
          guesses = guesses + 1
-      elif difference < 20 or difference < -20 :
+      if difference < 20 or difference < -20 :
          print("You're very close! \n")
-      elif difference > 20 and difference < 50 or difference > -20 and difference < -50:
+      if difference > 20 and difference < 50 or difference > -20 and difference < -50:
          print("You're extremely close to the number! \n")
       if guess == number or guesses == maxguesses:
          print("New round!")
