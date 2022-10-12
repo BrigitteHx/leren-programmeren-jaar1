@@ -34,11 +34,11 @@ while rounds <= maxrounds:
       if guess < number:
          print("Higher! \n")
       if guess == number: # onderaan 
-         print("You've guesses it! \n") 
+         print("You've guesses it! \n") # break toevoegen onder score ivm while true 
          score = score + 1
       guesses = guesses + 1 # na guesses optellen (korter)
       rounds = rounds + 1 
-      
+
       if guess == number or guesses == maxguesses:
          print("New round!")
          print(f"You have {score} points right now!\n ")
