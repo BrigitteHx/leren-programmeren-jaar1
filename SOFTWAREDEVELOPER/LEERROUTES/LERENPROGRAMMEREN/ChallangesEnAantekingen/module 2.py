@@ -1,8 +1,4 @@
 # yes
+value = 10.55657435
 
-
-x = 5
-y = "John"
-print(type(x))
-print (type(y))
-
+print(value(round(value,3)))

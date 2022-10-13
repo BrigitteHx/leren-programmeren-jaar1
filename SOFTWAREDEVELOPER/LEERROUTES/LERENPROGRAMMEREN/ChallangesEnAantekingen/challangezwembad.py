@@ -54,7 +54,11 @@ elif voorrijkostafstand >= 50 and TotaalGrondAfgevoerdZwembad1 >= 20:
 
 # --- stap 5a:
 
-m2 = lengtezwembad1 * breedtezwembad1
+m2 = lengtezwembad1 * breedtezwembad1 # bodem
+m22 = lengtezwembad1 * dieptezwembad1 # lang muur 
+m222 = dieptezwembad1 * dieptezwembad1 # korte muur
+totaalm2 = m2 + m22 * 2 + m222 * 2
+
 prijsperm2klein = 250
 prijsperm2groot = 200
 meerprijsroodklein = 25
@@ -62,24 +66,24 @@ meerprijsroodgroot = 20
 meerprijskleurklein = 100
 meerprijskleurgroot = 125
 
-print(f"Uw zwembad is {m2} vierkante meter. ")
+print(f"Uw zwembad is {totaalm2} vierkante meter. ")
 kleur = input("Wilt u rood of kleuren tegels? (antwoord met rood/ kleur) ")
 
 if TotaalGrondAfgevoerdZwembad1 < 20 and kleur == "rood": 
-    prijs1 = m2 * prijsperm2klein
-    rood = m2 * meerprijsroodklein
+    prijs1 = totaalm2 * prijsperm2klein
+    rood = totaalm2 * meerprijsroodklein
     totaaltegels = prijs1 + rood
 elif TotaalGrondAfgevoerdZwembad1 >= 20 and kleur == "rood": 
-    prijs1 = m2 * prijsperm2groot
-    rood = m2 * meerprijsroodgroot
+    prijs1 = totaalm2 * prijsperm2groot
+    rood = totaalm2 * meerprijsroodgroot
     totaaltegels = prijs1 + rood
 elif TotaalGrondAfgevoerdZwembad1 < 20 and kleur == "kleur":
-    prijs1 = m2 * prijsperm2klein
-    kleurbedrag = m2 * meerprijskleurklein
+    prijs1 = totaalm2 * prijsperm2klein
+    kleurbedrag = totaalm2 * meerprijskleurklein
     totaaltegels = prijs1 + kleurbedrag
 elif TotaalGrondAfgevoerdZwembad1 >= 20 and kleur == "kleur":
-    prijs1 = m2 * prijsperm2groot
-    kleurbedrag = m2 * meerprijskleurgroot 
+    prijs1 = totaalm2 * prijsperm2groot
+    kleurbedrag = totaalm2 * meerprijskleurgroot 
     totaaltegels = prijs1 * kleurbedrag
 
 # --- stap 5b 
@@ -87,10 +91,10 @@ elif TotaalGrondAfgevoerdZwembad1 >= 20 and kleur == "kleur":
 totaal = uitgraafkosten + afvoerkosten + voorijkosten + totaaltegels
 
 print("")
-print(f"Offerte voor een zwembad van 8 bij 3 bij 1.5 meter (inhoud: {TotaalGrondAfgevoerdZwembad1} m3)")
-print(f"Uitgraven:                   € {uitgraafkosten}")
-print(f"Afvoeren grond:              € {afvoerkosten} ")
-print(f"Voorrijkosten:               € {voorijkosten} ")
-print(f"Beton + tegels, {m2} m2:     € {totaaltegels} ")
-print(f"Totaal:                      € {totaal} ")
+print(f"Offerte voor een zwembad van 8 bij 3 bij 1.5 meter (inhoud: {round(TotaalGrondAfgevoerdZwembad1, 2)} m3)")
+print(f"Uitgraven:                          € {round(uitgraafkosten, 2)}")
+print(f"Afvoeren grond:                     € {round(afvoerkosten, 2)} ")
+print(f"Voorrijkosten:                      € {round(voorijkosten, 2)} ")
+print(f"Beton + tegels, {round(totaalm2, 2)} m2:            € {round(totaaltegels,2)} ")
+print(f"Totaal:                             € {round(totaal, 2)} ")
 
