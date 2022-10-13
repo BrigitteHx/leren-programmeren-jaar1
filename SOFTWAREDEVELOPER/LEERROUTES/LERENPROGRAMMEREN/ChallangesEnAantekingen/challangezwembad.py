@@ -88,9 +88,9 @@ totaal = uitgraafkosten + afvoerkosten + voorijkosten + totaaltegels
 
 print("")
 print(f"Offerte voor een zwembad van 8 bij 3 bij 1.5 meter (inhoud: {TotaalGrondAfgevoerdZwembad1} m3)")
-print(f"Uitgraven:          € {uitgraafkosten}")
-print(f"Afvoeren grond:     € {afvoerkosten} ")
-print(f"Voorrijkosten:      € {voorijkosten} ")
-print(f"Beton + tegels:     € {totaaltegels} ")
-print(f"Totaal:             € {totaal} ")
+print(f"Uitgraven:                   € {uitgraafkosten}")
+print(f"Afvoeren grond:              € {afvoerkosten} ")
+print(f"Voorrijkosten:               € {voorijkosten} ")
+print(f"Beton + tegels, {m2} m2:     € {totaaltegels} ")
+print(f"Totaal:                      € {totaal} ")
 
