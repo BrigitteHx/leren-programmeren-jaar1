@@ -97,4 +97,3 @@ print(f"Afvoeren grond:                     € {round(afvoerkosten, 2)} ")
 print(f"Voorrijkosten:                      € {round(voorijkosten, 2)} ")
 print(f"Beton + tegels, {round(totaalm2, 2)} m2:            € {round(totaaltegels,2)} ")
 print(f"Totaal:                             € {round(totaal, 2)} ")
-
