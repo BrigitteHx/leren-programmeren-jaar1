@@ -19,20 +19,23 @@
 
 # ----------------------------------------------------------------------------------- 
 
-lijst = [] 
-amount = 1
+Lijst = [] 
+Aantal = 1
+VraagMeer = True # zelfde effect as while true, conditie die hoort bij while
 
-while True: 
+while VraagMeer: 
+ ToevoegenAntw = str(input("Wilt u iets aan uw boodschappenlijst toevoegen? "))
+ ToevoegenAntw.lower()
+ if ToevoegenAntw == "ja": 
+    Item = input("Wat wilt u toe voegen aan uw boodschappenlijst? ")
+    # if Item == Item:
+    #     Aantal =+ 1
+    Lijst.append(Item)
+ elif ToevoegenAntw == "nee":
+    VraagMeer = False
 
- vraag = str(input("Wilt u iets aan uw boodschappenlijst toevoegen? "))
- vraag.lower()
- if vraag == "ja": 
-    item = input("Wat wilt u toe voegen aan uw boodschappenlijst? ")
-    if item == item:
-        amount =+ 1
-    lijst.append(item)
- elif vraag == "nee":
-    print("Uw boodschappen lijst:")
-    for x in lijst: 
-        print(amount, x)
-    break   
+print("Uw boodschappen lijst:")
+for x in Lijst: 
+    print(Aantal, x)
+ 
+# dictionary voor aantal boodschappen uitzoeken!! 

@@ -4,8 +4,8 @@ import random
 
 nummers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Boer', 'Koningin', 'Koning', 'Aas']
 kleuren = ["klaveren", "ruiten", "schoppen", "harten"]
-joker1 = ["Joker"]
-joker2 = ["Joker"]
+joker1 = "Joker"
+joker2 = "Joker"
 kaarten = []
 
 kaarten.append(joker1)
@@ -13,7 +13,7 @@ kaarten.append(joker2) # voegt jokers toe aan kaart
 
 for kleur in kleuren: 
     for nummer in nummers: 
-        kaarten.append((nummer, kleur)) # voegt ze samen
+        kaarten.append({"nummer":nummer, "kleur":kleur}) # voegt ze samen
         
 aantal = 1
 for randomkaart in range(1,8):
