@@ -6,7 +6,6 @@
 # als verschil, reken verschil in hoeveelheid ronde en niet ronde vruchten uit
 
 from fruitmand import fruitmand
-from operator import itemgetter
 
 lijstkleuren = []
 
@@ -41,5 +40,4 @@ elif aantalronde < aantalnietronde:
     print(f"Er zijn {verschilrond} minder ronde vruchten dan niet ronde vruchten in de kleur {kleurenkiezen}")
 else: 
     print(f"Er zijn {verschilrond} ronde vruchten en {verschilrond} niet ronde vruchten in de kleur {kleurenkiezen}")
-    
     
