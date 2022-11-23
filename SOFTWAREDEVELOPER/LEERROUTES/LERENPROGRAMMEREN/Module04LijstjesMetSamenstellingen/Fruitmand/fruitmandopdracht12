@@ -19,7 +19,6 @@ vertaling = {"yellow":"geel","green":"groen", "orange":"oranje", "red":"rood", "
 
 print(f"De {naam} heeft de langste naam, is {vertaling[kleur]} en weegt {gewicht} gram. ")
 
-
 # uitgelegd functie max en vertalen meneer slemmer: 
 
 # translation = {"yellow":"geel","green":"groen"} 

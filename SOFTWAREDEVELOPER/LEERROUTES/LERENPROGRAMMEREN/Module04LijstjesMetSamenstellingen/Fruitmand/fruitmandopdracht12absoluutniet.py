@@ -37,7 +37,6 @@ def fruit_longest_word2(fruitmand):
             fruitmax = fruit
     return fruitmax
 
-
 # def langste_naam(fruitmand):
 #     return max(fruitmand, key=lambda name:len(name['name']))
 

@@ -9,11 +9,11 @@ from fruitmand import fruitmand
 
 lijstkleuren = []
 
-for i in range (len(fruitmand)):
+for i in range (len(fruitmand)): # zonder i 
     if fruitmand[i]['color'] is not lijstkleuren: 
         lijstkleuren.append(fruitmand[i]['color'])
         
-while True:
+while True: #condition
     kleurenkiezen = input('Kies uit de volgende kleuren: yellow, brown, green, red and/or orange. ')
     if kleurenkiezen.lower() in lijstkleuren:
         print(f'De kleur {kleurenkiezen} zit in de fruitmand. ')
