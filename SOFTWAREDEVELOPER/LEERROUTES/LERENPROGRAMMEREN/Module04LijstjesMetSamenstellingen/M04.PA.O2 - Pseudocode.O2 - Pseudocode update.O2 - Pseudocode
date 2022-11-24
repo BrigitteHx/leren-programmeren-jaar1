@@ -3,7 +3,7 @@ M04.PA.O2 - Pseudocode
 namen_lijst = [], {} (2 maken ivm 2 lijsten later)
 aantal_namen = 0
 
-while true:
+gedurende begin:
     keuze_naam = wilt u een naam toevoegen? 
     als u een naam wilt toevoegen
         naam_invoer = voer een unieke naam in   
@@ -30,6 +30,6 @@ gedurende lootjes = waar
         als de naam van namen_lijst en namen_doorelkaar hetzelfde zijn
             namen_doorelkaar = True, doet koppelen opnieuw ^
 
-    voor de gehele lengte van namen_lijst
+voor de gehele lengte van namen_lijst
     lootjeseind = namenlijst[naam] met namen_doorelkaar[naam] (koppelen verschillende en zetten deze in lootjeseind)
     print(lootjeseind)
