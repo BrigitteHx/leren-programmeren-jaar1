@@ -1,35 +1,5 @@
 M04.PA.O2 - Pseudocode
 
-namen_lijst []
-aantal_namen = 0
-while naam_invoer = leeg:
-    keuze_naam = input = wilt u een naam toevoegen? 
-    if keuze_naam == ja:
-        naam_invoer = input = voer een unieke naam in
-        nieuwe_naam = naam_invoer 
-        nieuwe_naam.append(namen_lijst)
-        naam_invoer = "" (leeg maken)
-        aantal_namen =+1
-    elif keuze_naam == nee and aantal_namen => 3:
-        print(dit is nu de gehele lijst: namen_lijst)
-        def copy_namen(namen_lijst):
-        copy_namen = []
-        for naam in namen_lijst:
-            copy_namen.append(namen_lijst)
-        return copy_namen
-
-
-
-
-
-
-
-    elif keuze_naam == nee and aantal_namen <3:
-        print(u heeft niet genoeg namen opgegeven)
-        naam_invoer = "" (leeg maken) ( terug naar ^)
-
-----------------------------------------------------------------------------
-
 namen_lijst = [], [] (2 maken ivm 2 lijsten later)
 aantal_namen = 0
 
