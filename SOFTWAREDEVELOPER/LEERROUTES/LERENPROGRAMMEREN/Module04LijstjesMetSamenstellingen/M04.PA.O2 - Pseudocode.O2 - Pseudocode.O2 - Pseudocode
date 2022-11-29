@@ -33,4 +33,3 @@ while lootjes = true
 
     for lengte in namen_lijst
     lootjeseind = namenlijst[naam] met namen_doorelkaar [naam]
-    print(lootjeseind)
