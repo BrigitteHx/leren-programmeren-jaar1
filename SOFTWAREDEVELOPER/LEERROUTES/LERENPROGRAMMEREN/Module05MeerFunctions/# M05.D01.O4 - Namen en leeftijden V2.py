@@ -19,3 +19,5 @@ def namen_leeftijden_lijst():
                 print(el, "is", leeftijd_lijst[tel], "jaar oud.")
     
 namen_leeftijden_lijst()
+
+# for = element bijhouden/ uit verzamling halen, variabele houd bij, enumerta zowel element als posititie 
