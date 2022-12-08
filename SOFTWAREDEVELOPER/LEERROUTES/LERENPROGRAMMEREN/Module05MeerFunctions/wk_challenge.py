@@ -6,6 +6,7 @@ wedstrijd_verloren = 0
 groep_a = []
 wedstrijd_verdeling = {}
 landen_invoeren = True
+print("Voer hier 3 landen in voor groep A: ")
 
 while landen_invoeren:
     keuze_invoeren = input("Wilt u een voetbal land toevoegen? ").lower()
@@ -19,6 +20,24 @@ while landen_invoeren:
         landen_invoeren = False
 
 print(f"Dit is groep A {groep_a}")
+
+score_invoer = True
+wedstrijd_nummer = 1
+
+def score_voetbal():
+        for tel, el in enumerate(groep_a):
+            score = int(input(f"Voer hier de score in voor land {tel+1, el}: "))
+        return score
+
+
+print(f"Wedstrijd {wedstrijd_nummer}: {groep_a[0]} vs {groep_a[1]}")
+
+print(f"Registreer hier de score: ")
+score_wedstrijd_1 = score_voetbal()
+
+
+
+#  random wedstrijd verdelen :---------------------------------------------------------------------------------------------------------
 
 # landen_verdelen = True 
 
