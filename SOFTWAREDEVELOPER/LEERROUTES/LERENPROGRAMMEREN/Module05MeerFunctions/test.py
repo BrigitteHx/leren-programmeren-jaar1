@@ -26,16 +26,3 @@
 # print(mijn_lijst)
 
 #------------------------------------------------------------------------------------------------
-landen_verdelen = True 
-
-while landen_verdelen:
-    landen_door_elkaar = random.sample(groep_a, len(groep_a))
-    landen_verdelen = False
-    for i in range(len(groep_a)):
-        if landen_door_elkaar[i] == groep_a[i]:   
-            landen_verdelen = True                  
-
-for land in range(len(groep_a)):                 
-    wedstrijd_verdeling.update({groep_a[land] : landen_door_elkaar[land]}) 
-
-print(f"De landen die tegen elkaar moeten spelen: {wedstrijd_verdeling}")

@@ -52,3 +52,5 @@ score_wedstrijd_1 = score_voetbal()
 #     wedstrijd_verdeling.update({groep_a[land] : landen_door_elkaar[land]}) 
 
 # print(f"De landen die tegen elkaar moeten spelen: {wedstrijd_verdeling}")
+
+# update naar schema
