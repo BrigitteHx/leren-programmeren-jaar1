@@ -35,7 +35,7 @@ if choice1 == "B" :
     print("Coming closer you realise its an apple tree! ")
     sleep(1) 
     choice9 = input("Those apples look really good, would you like to take a break and eat some? (y/n) ")
-        if choice9 == "y" :
+    if choice9 == "y" :
 
 
 elif choice1 == "A" or "C" :
