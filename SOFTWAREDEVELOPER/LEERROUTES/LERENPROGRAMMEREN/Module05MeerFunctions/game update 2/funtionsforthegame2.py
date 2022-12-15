@@ -1,9 +1,6 @@
-# M05.D01.O8 - Game over! - Retry?
-from time import sleep
+#funtions for the game2
 
-# functions: 
-# INLEIDING 
-
+# VRAGEN
 def inleiding():
     inleiding_answer = input("Welcome to the Maze of Madness, are you ready to play? (y/n) ").lower()
     return inleiding_answer
@@ -37,7 +34,6 @@ def chapter1():
 def chapter1_option1():
     print("""
     On the way you come across another intersection..
-    
     
     A. You choose to ignore the other ways and follow the route, lets go!
     B. You're going left, what will that way bring you to?
@@ -103,53 +99,11 @@ def chapter3_goodending():
     You kept going straight to the exit and found the exit!
     Congrats, you unlocked the *good ending*! Have a wonderful rest of your day.""")
 
-
-# variabelen:
+#VARIABELEN 
 yes = ("yes", "y")
 no = ("no", "n")
-# a = "a"
-# b = "b"
-# c = "c"
-# d = "d"
+a = "a"
+b = "b"
+c = "c"
+d = "d"
 game = True
-
-
-# code:
-
-while game:
-    antwoord1 = inleiding()
-    if antwoord1 in yes:
-        naam()
-        chapter1()
-        antwoord2 = ABCkeuze()
-        if antwoord2 == "a" or antwoord2 == "c":
-            chapter1_option1()
-            antwoord4 = ABCkeuze()
-        elif antwoord2 == "b":
-            chapter1_option2()
-            antwoord3 = YNkeuze()
-            if antwoord3 == "y":
-             chapter1_badending()
-             game = False
-            elif antwoord3 == "n":
-             chapter1_goodeding()
-             game = False
-        if antwoord4 == "c": 
-            chapter2_semigoodending()
-            game = False
-        elif antwoord4 == "a" or antwoord4 == "b":
-            chapter2_continue()
-            antwoord5 = ABkeuze()
-            if antwoord5 == "a":
-                chapter3_badending()
-                game = False
-            elif antwoord5 == "b":
-                chapter3_goodending()
-                game is False
-    if game == False:
-        print("Wilt u nog een keer spelen? ")
-        antwoord6 = YNkeuze()
-        if antwoord6 == "y": 
-            game = True
-        else: 
-            exit()
