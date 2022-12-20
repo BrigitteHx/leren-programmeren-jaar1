@@ -6,31 +6,31 @@ while game:
     antwoord1 = inleiding()
     if antwoord1 in yes:
         naam()
-        chapter1()
+        keuze_een()
         antwoord2 = ABCkeuze()
         if antwoord2 in a or antwoord2 in c:
-            chapter1_option1()
+            keuze_twee()
             antwoord4 = ABCkeuze()
         elif antwoord2 in b:
-            chapter1_option2()
+            keuze_twee_b()
             antwoord3 = YNkeuze()
             if antwoord3 in yes:
-             chapter1_badending()
+             bad_ending()
              game = False
             elif antwoord3 in no:
-             chapter1_goodeding()
+             good_eding()
              game = False
         if antwoord4 in c: 
-            chapter2_semigoodending()
+            semigood_ending()
             game = False
         elif antwoord4 in a or antwoord4 in b:
-            chapter2_continue()
+            keuze_drie()
             antwoord5 = ABkeuze()
             if antwoord5 in a:
-                chapter3_badending()
+                bad_ending_twee()
                 game = False
             elif antwoord5 in b:
-                chapter3_goodending()
+                good_ending_twee()
                 game is False
     if game == False:
         print("Wilt u nog een keer spelen? ")

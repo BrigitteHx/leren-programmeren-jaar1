@@ -22,7 +22,7 @@ def YNkeuze():
     return keuze
 
 # CHAPTERS
-def chapter1():
+def keuze_een():
     print("""
     Alright then, you're standing in front of the maze and you can see the 3 ways right in front of you..
     
@@ -31,7 +31,7 @@ def chapter1():
     C. But what about left? What will I find there? I'm going to find that out. 
        """)
 
-def chapter1_option1():
+def keuze_twee():
     print("""
     On the way you come across another intersection..
     
@@ -40,7 +40,7 @@ def chapter1_option1():
     C. That one bush doesn't look so stable, you're not liking this maze very much and decide to climb over it.. 
     """)
 
-def chapter1_option2():
+def keuze_twee_b():
     print("""
     So you've decided to keep going?
     Thats great, while you're walking forward you notice something in the distance.
@@ -49,7 +49,7 @@ def chapter1_option2():
     Those apples look really good, would you like to take a break and eat some? (y/n) 
     """)
 
-def chapter1_badending():
+def bad_ending():
      print("""
     Didnt I mention that you should ever trust a maze?! 
     The apples end up being poisened and you die. 
@@ -59,7 +59,7 @@ def chapter1_badending():
     Not that you should be proud of it.. Better luck next time!
     """)
 
-def chapter1_goodeding():
+def good_eding():
     print(""" 
     Nice decision to see through that, those apples were poisened! ")
     You kept walking and walked straight into victory!")
@@ -67,13 +67,13 @@ def chapter1_goodeding():
     Good job, you found the exit and unlocked the GOOD ENDING!
     """)
 
-def chapter2_semigoodending():
+def semigood_ending():
     print("""
     Oh no! You while you climbed over the bush you hurt yourself, a sprained ankle is never nice.
     At least you made it out of the maze quickly, congrats! You earned the *semi-good* ending.
     """)
     
-def chapter2_continue():
+def keuze_drie():
     print("""You've been on your way a little while when you a bridge in the distance.
     You could also still follow the route.
 
@@ -83,7 +83,7 @@ def chapter2_continue():
     B. Im not so sure about that bridge and I'd rather follow the route. 
     """)
 
-def chapter3_badending():
+def bad_ending_twee():
     print("""
     So you're a though one? Crossing a bridge in a maze, I havent seen a lot people do that before.
     Too bad for you, you shouldn't have done it either...
@@ -93,7 +93,7 @@ def chapter3_badending():
     You fell through the bridge and earned the *bad ending*.
     """)
 
-def chapter3_goodending():
+def good_ending_twee():
     print("""
     Very, very wise descision to follow the route, that bridge wasnt stable at all.
     You kept going straight to the exit and found the exit!
