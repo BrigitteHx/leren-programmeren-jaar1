@@ -1,4 +1,4 @@
-from functions import *
+from functions import * 
 from data import *
 
 totalCost = 0
