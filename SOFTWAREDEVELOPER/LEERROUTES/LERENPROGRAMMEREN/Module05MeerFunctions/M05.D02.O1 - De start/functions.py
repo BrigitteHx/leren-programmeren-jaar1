@@ -121,18 +121,23 @@ def getItemsValueInGold(items:list) -> float:
 ##################### M04.D02.O8 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    TotalGold1 = 0
+    TotalGold = 0
+    for person in people:
+        TotalGold += person['cash']['gold']
+        TotalGold += platinum2gold(person['cash']['platinum'])
+        TotalGold += silver2gold(person['cash']['silver'])
+        TotalGold += copper2gold(person['cash']['copper'])
+    return TotalGold
+ 
+    # TotalGold = 0
 
-    for person in range(len(people)):
-        TotalGold1 = platinum2gold(person['cash']['platinum'])
-        TotalGold2 =+ TotalGold1
-        TotalGold1 = silver2gold(person['cash']['silver'])
-        TotalGold2 =+ TotalGold1
-        TotalGold1 = copper2gold(person['cash']['copper'])
-        TotalGold2 =+ TotalGold1
+    # for person in range(len(people)):
+    #     TotalGold += platinum2gold(person['cash']['platinum'])
+    #     TotalGold += silver2gold(person['cash']['silver'])
+    #     TotalGold += copper2gold(person['cash']['copper'])
         
-        TotalGold1 += person['cash']['gold']
-    return round(TotalGold2,2)
+    #     TotalGold += person['cash']['gold']
+    # return TotalGold
         
     # PriceType = people[nummer]['cash'] 
     # for nummer in range(len(people)):
@@ -142,13 +147,30 @@ def getCashInGoldFromPeople(people:list) -> float:
 ##################### M04.D02.O9 ##################### 
 
 def getInterestingInvestors(investors:list) -> list:
-    pass
+    YesInvestor = []
+    for investor in investors:
+        if investor['profitReturn'] < 10:
+            YesInvestor.append(investor)
+    return YesInvestor
 
-def getAdventuringInvestors(investors:list) -> list:
-    pass
+def getAdventuringInvestors(investors: list) -> list:
+    investors = getInterestingInvestors(investors)
+    AdventuringInvestor = []
+    for investor in investors:
+        if investor['adventuring']:
+            AdventuringInvestor.append(investor)
+    return AdventuringInvestor
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    gold = 0
+    investors = getAdventuringInvestors(investors)
+    # for investor in range(len(investors)):
+    #     gold += getItemsValueInGold(gear)
+    # gold += getJourneyFoodCostsInGold(len(investors), len(investors))
+    # gold += getTotalRentalCost(len(investors), len(investors))
+    # print("totalrentalcost: ", getTotalRentalCost(len(investors), len(investors)))
+    # print("journeyfoodcosts: ", getJourneyFoodCostsInGold(len(investors), len(investors)))
+    return gold
 
 ##################### M04.D02.O10 #####################
 
