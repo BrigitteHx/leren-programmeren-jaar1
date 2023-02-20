@@ -60,10 +60,10 @@ def getShareWithFriends(friends:list) -> int:
 def getAdventuringFriends(friends:list) -> list:
     NieuweLijst = []
     for nummer in range(len(friends)):
-        if friends[nummer]["adventuring"]:
+        if friends[nummer]["adventuring"] and friends[nummer]["shareWith"]:
             NieuweLijst.append(friends[nummer]["name"])
-        if friends[nummer]["shareWith"]:
-            NieuweLijst.append(friends[nummer]["name"])
+        # if friends[nummer]["shareWith"]:
+        #     NieuweLijst.append(friends[nummer]["name"])
     return NieuweLijst
 
 ##################### M04.D02.O6 #####################
@@ -108,10 +108,10 @@ def getItemsValueInGold(items:list) -> float:
         if PriceType == 'copper':
             TotalPrice += amount * copper2gold(price)
 
-        elif PriceType == 'silver':
+        if PriceType == 'silver':
             TotalPrice += amount * silver2gold(price)
 
-        elif PriceType == 'platinum':
+        if PriceType == 'platinum':
             TotalPrice += amount * platinum2gold(price)
 
         else:
@@ -149,7 +149,7 @@ def getCashInGoldFromPeople(people:list) -> float:
 def getInterestingInvestors(investors:list) -> list:
     YesInvestor = []
     for investor in investors:
-        if investor['profitReturn'] < 10:
+        if investor['profitReturn'] <= 10:
             YesInvestor.append(investor)
     return YesInvestor
 
@@ -161,7 +161,7 @@ def getAdventuringInvestors(investors: list) -> list:
             AdventuringInvestor.append(investor)
     return AdventuringInvestor
 
-# NIET GOED
+# niet werkende maar andere optie 
 # def getTotalInvestorsCosts(investors:list, gear:list) -> float:
 #     rentalCost = getTotalRentalCost(1,1)
 #     foodCost = getJourneyFoodCostsInGold(1,1)
