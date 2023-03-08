@@ -60,7 +60,10 @@
 
 // totaalPoten();
 
-function TotaalPoten(){
+function TotaalPoten(aantalGiraf,aantalStruis,aantalZebra){
+    const girafPoten = 4;
+    const struisPoten = 2;
+    const zebraPoten = 4;
     totaalAantalPoten = parseInt((aantalGiraf * girafPoten) + (aantalStruis * struisPoten) + (aantalZebra * zebraPoten));
     return totaalAantalPoten
 }
@@ -69,11 +72,7 @@ aantalGiraf = prompt("Hoeveel Giraffen zijn er?");
 aantalStruis = prompt("Hoeveel Struisvogels zijn er?");
 aantalZebra = prompt("Hoeveel Zebra's zijn er?");
 
-const girafPoten = 4;
-const struisPoten = 2;
-const zebraPoten = 4;
-
-totaalAantalPoten = (TotaalPoten(aantalGiraf,aantalStruis,aantalZebra));
+// totaalAantalPoten = (TotaalPoten(aantalGiraf,aantalStruis,aantalZebra));
 
 console.log("Het totaal aantal poten is ", totaalAantalPoten);
 
