@@ -88,34 +88,63 @@ def getTotalRentalCost(horses:int, tents:int) -> float:
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
-    ItemsAsText = []
-    for item in items:
-        ItemsAsText.append(f"{item['amount']}{item['unit']} {item['name']}")
-    return ', '.join(ItemsAsText)
-
-# .join functie: Join all items in a tuple into a string, using a hash character as separator
+    converted= ""
+    for key in range (len(items)):
+        amount = str(items[key]['amount'])
+        converted += amount + items[key]['unit'] + " " + items[key]['name']
+        if key < len(items) -1:
+            converted += ','
+    return(converted)
 
 def getItemsValueInGold(items:list) -> float:
-    TotalPrice = float()
+    value = 0
+    for key in range (len(items)):
+        if items[key]['price']['type'] =='gold':
+            amount = items[key]['price']['amount'] * items[key]['amount']
+            value += amount
+        elif items[key]['price']['type'] =='copper':
+            amount = copper2gold( items[key]['price']['amount']) * items[key]['amount']
+            value += amount
+        elif items[key]['price']['type'] =='silver':
+            amount = silver2gold (items[key]['price']['amount']) * items[key]['amount']
+            value += amount
+        elif items[key]['price']['type'] =='platinum':
+            amount =  platinum2gold(items[key]['price']['amount']) * items[key]['amount']
+            value += amount
+        totaal = round(value,2)
+    return totaal
 
-    for item in items:
-        amount = item['amount']
-        price = item['price']['amount']
+# MANIER 2, NIET WERKEND 
 
-        PriceType = item['price']['type']
+# def getItemsAsText(items:list) -> str:
+#     ItemsAsText = []
+#     for item in items:
+#         ItemsAsText.append(f"{item['amount']}{item['unit']} {item['name']}")
+#     return ', '.join(ItemsAsText)
 
-        if PriceType == 'copper':
-            TotalPrice += amount * copper2gold(price)
+# # .join functie: Join all items in a tuple into a string, using a hash character as separator
 
-        if PriceType == 'silver':
-            TotalPrice += amount * silver2gold(price)
+# def getItemsValueInGold(items:list) -> float:
+#     TotalPrice = float()
 
-        if PriceType == 'platinum':
-            TotalPrice += amount * platinum2gold(price)
+#     for item in items:
+#         amount = item['amount']
+#         price = item['price']['amount']
 
-        else:
-            TotalPrice += price
-    return TotalPrice
+#         PriceType = item['price']['type']
+
+#         if PriceType == 'copper':
+#             TotalPrice += amount * copper2gold(price)
+
+#         if PriceType == 'silver':
+#             TotalPrice += amount * silver2gold(price)
+
+#         if PriceType == 'platinum':
+#             TotalPrice += amount * platinum2gold(price)
+
+#         else:
+#             TotalPrice += price
+#     return TotalPrice
 
 ##################### M04.D02.O8 #####################
 
