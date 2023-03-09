@@ -45,25 +45,25 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     NieuweLijst = []
-    for nummer in range(len(list)):
-        if list[nummer][key]==value:
-            NieuweLijst.append(list[nummer])
+    for element in list:
+        if element[key]==value:
+            NieuweLijst.append(element)
     return NieuweLijst
 
 def getAdventuringPeople(people:list) -> list:
     return getFromListByKeyIs(people, "adventuring", True)
 
 def getShareWithFriends(friends:list) -> int:
-    return getShareWithFriends(friends, "shareWith", True)
+    return getFromListByKeyIs(friends, "shareWith", True)
 
 def getAdventuringFriends(friends:list) -> list:
-    NieuweLijst = []
-    for nummer in range(len(friends)):
-        if friends[nummer]["adventuring"] and friends[nummer]["shareWith"]:
-            NieuweLijst.append(friends[nummer]["name"])
-        # if friends[nummer]["shareWith"]:
-        #     NieuweLijst.append(friends[nummer]["name"])
-    return NieuweLijst
+    # NieuweLijst = []
+    # for friend in friends:
+    #     if friend["adventuring"] and friend["shareWith"]:
+    #         NieuweLijst.append(friend)
+    #     # if friends[nummer]["shareWith"]:
+    #     #     NieuweLijst.append(friends[nummer]["name"])
+    return getAdventuringPeople(getShareWithFriends(friends))
 
 ##################### M04.D02.O6 #####################
 
@@ -211,7 +211,7 @@ def getInvestorsCuts(profitGold:float, investors:list) -> list:
         # profitInvestors.append(round((profitGold/100) * investors[x]["profitReturn"],2)) 
     return profitInvestors
 
-def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:list) -> float:
+def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> float:
 
     for gold in range(len(investorsCuts)):
         profitGold = profitGold - investorsCuts[gold]
@@ -240,22 +240,24 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
     for person in people:
         #code aanvullen
         startAdventure = getPersonCashInGold(person["cash"])
-        endAdventure =+ startAdventure
+        endAdventure = startAdventure
         if person == mainCharacter:
-            endAdventure =+ round((startAdventure+goldCut) + (donateGold*len(adventuringFriends)),2)
-            # eindbedrag = start bedrag + jou deel + donation (x het aantal vriended)
+            endAdventure += round(goldCut + (donateGold*len(adventuringFriends)),2)
+            # print(startAdventure)
+            # print(endAdventure)
+            # eindbedrag =  jou deel + donation (x het aantal vrienden)
         if person in adventuringFriends:
-            endAdventure =+ round((startAdventure+goldCut)-donateGold,2)
-            # eindbedrag = startbedrag + jou deel - 1x donation (want niet hoofd persoon), vrienden dus geen inversteer deel terug
-        if "profitReturn" in person:
-            if person in getInterestingInvestors(investors):
-                # investors die mee gaan:
-                if person in getAdventuringPeople(investors):
-                    endAdventure =+ round((profitGold/100)*person["profitReturn"]+startAdventure+goldCut,2)
+            endAdventure += round(goldCut-donateGold,2)
+            # eindbedrag = jou deel - 1x donation (want niet hoofd persoon), vrienden dus geen inversteer deel terug
+        
+        if person in getInterestingInvestors(investors):
+            if person in getAdventuringPeople(investors):
+                    endAdventure += round((profitGold/100)*person["profitReturn"]+goldCut,2)
                     # eindbedrag = profit / 100 (want%) x investors profitreturn + start + goldcut 
-                else:
-                    endAdventure =+ round((profitGold/100)*person["profitReturn"]+startAdventure,2)
+            else:
+                    endAdventure += round((profitGold/100)*person["profitReturn"],2)
                     # eindbedrag = profit / 100 (want%) x investors profitreturn + start (geen goldcut want ging niet mee)
+        
         earnings.append({
             'name'   : person["name"],
             'start'  : startAdventure,
@@ -263,65 +265,17 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
         })
     return earnings
 
+# main character [CHECK]
+# adventuring investors [CHECK]
+# non adventuring investors [CHECK]
+# adventuring friends [CHECK]
+  
 # feedback Israa:
 # volgens mij je code is helemaal goed, de enige die misschien fout ging is dat je bij de earnings moet ook mensen die niet mee hebben gedaan in de reis hebben en hun end cash is dus hetzelfd als hun start cash
 # dus die zijn investerso die vroegen meer dan 10% of friends die niet sharewith en adventuring op true hebben
 # dus bij de earnings moeten alle namen van friends en investors en dus niet allen interesting investors en adventuring friends
-# ik weet het niet of mij  uitleg duidelijk was, maar als niet kan ik ook een stukje code laten zien over wat ik bedoel
-
+#
 # ------------------------------------------------------------------------------------------------------------------------------------------------
- 
-# VERSION 2 (WERKT NIET)
-
-# def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-#     people = [mainCharacter] + friends + investors
-#     earnings = []
-
-#     # haal de juiste inhoud op
-#     adventuringFriends = getAdventuringFriends(friends)
-#     interestingInvestors = getInterestingInvestors(investors)
-#     adventuringInvestors = getAdventuringInvestors(investors)
-#     # investorsCuts = getInvestorsCuts(profitGold ,getInterestingInvestors(investors))
-#     # goldCut = round(getAdventurerCut(profitGold,investorsCuts,len([mainCharacter]+adventuringFriends+getAdventuringInvestors(investors))),2)
-
-#     people = [mainCharacter] + friends + investors 
-#     peopleTotal = [mainCharacter] + adventuringFriends + adventuringInvestors
-#     # donateGold = 10
-#     donateGold = len(adventuringFriends) * 10
-#     adventuresCut = (profitGold - sum(getInvestorsCuts(profitGold,investors)) ) / len(peopleTotal)
-#     gold = 0
-
-#     # verdeel de uitkomsten
-#     for person in range(len(people)):
-#         #code aanvullen
-
-#         startAdventure = round(getPersonCashInGold(people[person]['cash']),2)
-#         endAdventure = startAdventure
-
-#         # main character
-#         if people[person] in [mainCharacter]:
-#             endAdventure += donateGold + adventuresCut
-#         # investors 
-#         elif people[person] in [investors]:
-#             # investors die mee gingen
-#             if people[person] in interestingInvestors and people[person] in adventuringInvestors:
-#                 gold = round(profitGold / 100 * people[person][ 'profitReturn'],2)
-#                 endAdventure += gold + adventuresCut
-#             # investors die niet mee gingen
-#             elif people[person] in interestingInvestors: # deze mist bij andere methode
-#                 gold = round(profitGold / 100 * people[person][ 'profitReturn'],2)
-#                 endAdventure += gold
-#         # friends die meegingen
-#         elif people[person] in [friends]:
-#             if people[person] in adventuringFriends:
-#                 endAdventure += adventuresCut - 10
-        
-#         earnings.append({
-#                 'name'   : people[person]['name'],
-#                 'start'  : round(startAdventure),
-#                 'end'    : round(endAdventure)
-#             })  
-#     return earnings
 
 ##################### view functions #####################
 def print_colorvars(txt:str='{}', vars:list=[], color:str='yellow') -> None:

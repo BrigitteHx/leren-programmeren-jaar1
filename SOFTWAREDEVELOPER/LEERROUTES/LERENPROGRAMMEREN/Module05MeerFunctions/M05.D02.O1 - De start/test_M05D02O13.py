@@ -31,10 +31,11 @@ result2 = [{'name': 'TestChar2', 'start': 30.0, 'end': 200.0}]
 
 if getEarnigs(170, testMainCharacter2, [], []) != result2:
     print_colorvars(vars=['Test 2 is False'], color='red')
+    # print(getEarnigs(170, testMainCharacter2, [], []))
 else:
     print_colorvars(vars=['Test 2 is correct'], color='green')
 
- 
+
 
 inverstorsTestList1 = [{
     'name' : 'TestInvestor1',
