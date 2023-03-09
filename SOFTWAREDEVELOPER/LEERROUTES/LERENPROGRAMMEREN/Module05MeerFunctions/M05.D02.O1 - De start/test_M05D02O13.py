@@ -34,7 +34,7 @@ if getEarnigs(170, testMainCharacter2, [], []) != result2:
 else:
     print_colorvars(vars=['Test 2 is correct'], color='green')
 
-
+ 
 
 inverstorsTestList1 = [{
     'name' : 'TestInvestor1',

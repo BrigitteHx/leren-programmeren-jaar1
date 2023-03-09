@@ -270,7 +270,7 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
 # ik weet het niet of mij  uitleg duidelijk was, maar als niet kan ik ook een stukje code laten zien over wat ik bedoel
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------
-
+ 
 # VERSION 2 (WERKT NIET)
 
 # def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
@@ -321,7 +321,6 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
 #                 'start'  : round(startAdventure),
 #                 'end'    : round(endAdventure)
 #             })  
-
 #     return earnings
 
 ##################### view functions #####################
