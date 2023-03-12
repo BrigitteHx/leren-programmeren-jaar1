@@ -27,9 +27,13 @@
 
 # def stap 3 
 # while true
-#
-#
-#
-#
-#
-#
+#   print('Hier is uw {hoorntje/bakje}met {aantal}bolletje(s)')
+#   input('wilt u nog meer bestellen?')
+#   if input is ja:
+#       stap 1 
+#   elif input is nee:
+#       print('bedankt en nog een fijne dag verder')
+#       exit
+#   else:
+#       print('dat ken ik niet')
+#       terug naar input 
