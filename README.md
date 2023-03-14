@@ -2,6 +2,21 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+planning 14-3-2023:
+
+DYNAMISHCE USERINTERFACE:
+- M01.O4 - Horeca App 
+  + laatste aanpassingen 
+- CJV 
+  + Module 02 - DOM Manipulatie & Event Handeling
+  
+LEREN PROGRAMMEREN:
+- M05.PA.O1 - Een programma voorbereiden
+- CJV
+  + CJV.20 - Check op je voortgang
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 planning 10-3-2023:
 
 LEREN PROGRAMMEREN:
