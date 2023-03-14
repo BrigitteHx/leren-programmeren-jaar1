@@ -11,7 +11,7 @@ DYNAMISHCE USERINTERFACE:
   + Module 02 - DOM Manipulatie & Event Handeling
   
 LEREN PROGRAMMEREN:
-- M05.PA.O1 - Een programma voorbereiden
+- M05.PA.O1 - Een programma voorbereiden [DONE]
 - CJV
   + CJV.20 - Check op je voortgang
 
