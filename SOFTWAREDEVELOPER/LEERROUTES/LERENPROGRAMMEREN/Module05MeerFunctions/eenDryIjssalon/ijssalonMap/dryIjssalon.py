@@ -9,8 +9,8 @@ while doorloopSalon:
     aantalBolletjes = 0
     keuzeHoorntjeBakje = ""
 
-    aantalBolletjes = hoeveelBolletjes(MAXBOLLETJES, BOLLETJESBAKJE, BOLLETJESBEIDE, aantalBolletjes)
-    keuzeHoorntjeBakje = hoorntjeOfBakje(aantalBolletjes, keuzeHoorntjeBakje)
+    aantalBolletjes = hoeveelBolletjes(MAXBOLLETJES)
+    keuzeHoorntjeBakje = hoorntjeOfBakje(aantalBolletjes)
     functionAantalBolletjes = meerBestellen(JA, NEE)
     if functionAantalBolletjes == True:
         doorloopSalon = True
