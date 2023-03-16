@@ -5,7 +5,7 @@
 planning 16-3-2023:
 
 LEREN PROGRAMMEREN:
-- M05.PA.O2 - Een programma realiseren
+- M05.PA.O2 - Een programma realiseren [DONE]
 
 STATISCHE FRONTEND:
 - MP.O3 - Realiseer mobiele versie
