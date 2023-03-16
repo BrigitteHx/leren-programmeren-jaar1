@@ -45,14 +45,19 @@ def hoeveelBolletjes(MAXBOLLETJES, BOLLETJESBAKJE, BOLLETJESBEIDE, aantalBolletj
 
 def hoorntjeOfBakje(aantalBolletjes, keuzeHoorntjeBakje):
     kiezenHoorntjeBakje = True
+
     while kiezenHoorntjeBakje:
+        # 4 of meer bolletjes
         if aantalBolletjes in BOLLETJESBAKJE and aantalBolletjes not in BOLLETJESBEIDE:
             print(f"U heeft {aantalBolletjes} bolletjes dus u krijgt een bakje. ")
             kiezenHoorntjeBakje = False
     
+        # 1 t/m 3 bolletjes
         if aantalBolletjes in BOLLETJESBEIDE and aantalBolletjes not in BOLLETJESBAKJE:
             keuzeHoorntjeBakjeInput = str(input("Wilt u een hoorntje of een bakje? "))
-            keuzeHoorntjeBakje += keuzeHoorntjeBakjeInput
+            keuzeHoorntjeBakje = keuzeHoorntjeBakjeInput
+
+            # keuze hoorntje bakje
             if keuzeHoorntjeBakje in HOORNTJE or keuzeHoorntjeBakje in BAKJE:
                 print(f"Oke, u krijgt {aantalBolletjes} bolletjes in een {keuzeHoorntjeBakje}. ")
                 kiezenHoorntjeBakje = False
@@ -62,41 +67,25 @@ def hoorntjeOfBakje(aantalBolletjes, keuzeHoorntjeBakje):
                 kiezenHoorntjeBakje = True
     return keuzeHoorntjeBakje
 
+
 # keuzeHoorntjeBakje = hoorntjeOfBakje(aantalBolletjes, keuzeHoorntjeBakje)
 # print(keuzeHoorntjeBakje)
 
 def meerBestellen(JA, NEE):
-    functionAantalBolletjes = True
     kiezenMeerBestellen = True
     while kiezenMeerBestellen:
+
+        # keuze meer bestellen
         meerBestellenInput = str(input("Wilt u nog meer bestellen? "))
         if meerBestellenInput in JA:
             kiezenMeerBestellen = False
         elif meerBestellenInput in NEE: 
             print("Bedankt en nog een fijne dag verder!")
             kiezenMeerBestellen = False
+            return False  #stop programma
 
         else:
             print("Dat ken ik niet.")
             kiezenMeerBestellen = True
-    return functionAantalBolletjes
-
-# functionAantalBolletjes = meerBestellen(JA, NEE)
-
-# if functionAantalBolletjes == True:
-#     hoeveelBolletjes(MAXBOLLETJES, BOLLETJESBAKJE, BOLLETJESBEIDE, aantalBolletjes)
-
-doorloopSalon = True
-while doorloopSalon:
-       
-    aantalBolletjes = 0
-    keuzeHoorntjeBakje = ""
-
-    aantalBolletjes = hoeveelBolletjes(MAXBOLLETJES, BOLLETJESBAKJE, BOLLETJESBEIDE, aantalBolletjes)
-    keuzeHoorntjeBakje = hoorntjeOfBakje(aantalBolletjes, keuzeHoorntjeBakje)
-    functionAantalBolletjes = meerBestellen(JA, NEE)
-    if functionAantalBolletjes == True:
-        doorloopSalon = True
-    else:
-        doorloopSalon = False
+    return True  #continue programma
 
