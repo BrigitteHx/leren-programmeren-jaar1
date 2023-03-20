@@ -36,7 +36,7 @@ def hoeveelBolletjes(MAXBOLLETJES): #constanten hoeven niet mee geven te worden
         else:
             functionAantalBolletjes = False  
 
-    return aantalBolletjes
+    return aantalBolletjes  
 
 # aantalBolletjes = hoeveelBolletjes(MAXBOLLETJES, BOLLETJESBAKJE, BOLLETJESBEIDE, aantalBolletjes)
 # print(aantalBolletjes)
