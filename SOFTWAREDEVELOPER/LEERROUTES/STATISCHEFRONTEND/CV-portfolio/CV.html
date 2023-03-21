@@ -1,24 +1,106 @@
 <!-- Leerpad: Jouw CV & Portfolio -->
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>CV Brigitte Heijkoop</title>
+    <link rel="stylesheet" href="StylesheetCV.css">
+</head>
+<body>
+    <!-- CONTAINER ---------------------------------------------------------------------------------------------------------------------------- -->
+	<div class="container">
 
-<html lang="nl">
+		<header class="row">
+			<div class="col-xs-12">
+				<h1>CV Brigitte Heijkoop</h1>
+				<p>Welcome to my CV! Here you can find some of my latest projects and learn more about me.</p>
+			</div>
+		</header>
+
+    <!-- STYLE FOR MENU ---------------------------------------------------------------------------------------------------------------------------- -->
 	
-	<head>
-        <meta charset="UTF-8">
-		<title>CV Brigitte Heijkoop</title>
-		<link rel="stylesheet" href="StylesheetCV.css">
-	</head>
+    <style>
+        /* Style for navigation bar */
+        .navbar {
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          border-radius: 5px;
+          border: 1px rgb(0, 0, 0) solid;
+          background-color: rgb(0, 172, 172);
+          padding: 3px;
+        }
+  
+        /* links */
+        .navbar a {
+          float: left;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 15px;
+          border-radius: 7px;
+          border: 1px rgb(0, 0, 0) solid;
+          background-color: teal;
+          padding: 10px;
+        }
+  
+        .navbar a:hover {
+          background-color: rgb(116, 255, 255);
+          color: black;
+        }
+    
+      </style>
+    
+    <!-- MAIN ---------------------------------------------------------------------------------------------------------------------------- -->
 
-	
-	<body>
-        <div class="nav_menu" id="navmenu">
-            <li class="nav_item"><a href="CVhome.html" class="nav_link">Home</a></li>
-            <li class="nav_item"><a href="CVaboutme.html" class="nav_link">About me</a></li>
-            <li class="nav_item"><a href="CVexperience.html" class="nav_link">Past experience</a></li>
-            <li class="nav_item"><a href="CVeducation.html" class="nav_link">Education</a></li>
-            <li class="nav_item"><a href="CVcontact.html" class="nav_link">Contact</a></li>
-        </div>
-	</body>
+		<main class="row">
+			<div class="col-xs-12">
+				<h2>About me</h2>
+			</div>
+			<div class="col-xs-12 col-md-4">
+                <img src="" alt="Picture from me">
+				<p>Im Brigitte, a Dutch 17-year-old software development student who loves to learn and work together. I enjoy spending time with friends and family, playing sports such as horseback riding or my favorite hobby, reading!</p>
+            </div>
+			<div class="col-xs-12 col-md-4">
+				<h2>Services</h2>
+				<p>JS, Python, HTML, CSS, PHP, ... </p>
+			</div>
+			<div class="navbar" id="navmenu">
 
-</html>
+                <a href="CV.html">Home</a>
+                <a href="CVaboutme.html" class="active">Personalia</a>
+                <a href="CVexperience.html">Experience</a>
+                <a href="CVeducation.html">Education</a>
+            </div>
+
+		</main>
+
+        <!-- FOOTER ---------------------------------------------------------------------------------------------------------------------------- -->
+
+		<!-- <footer class="row">
+			<div class="col-xs-12">
+				<h2>Contact Me</h2>
+				<form>
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" id="name">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" id="email">
+					</div>
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea class="form-control" id="message"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</footer>
+	</div>
+</body>
+</html> -->
