@@ -79,7 +79,7 @@ h2 {
 }
   
 /* MENU ------------------------------------------------------------------------------------------------------------------------------------------- */
-/* met behulp van tutorial gemaakt en zelf verander!! */
+/* met behulp van tutorial gemaakt en zelf veranderd!! */
 
 /* > 767px */
 footer .navbar {
@@ -124,3 +124,57 @@ footer .nav-link {
 footer .nav-link:hover {
      background-color: #6c757d;
     }
+
+
+/* CONTACT -------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* centering */
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* heading */
+h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* submit button */
+button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
