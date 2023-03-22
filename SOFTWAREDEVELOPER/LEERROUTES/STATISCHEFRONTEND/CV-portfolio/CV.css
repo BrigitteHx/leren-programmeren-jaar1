@@ -1,8 +1,28 @@
 /* StylesheetCV */
 
+/* picture */
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto; /* horzinal */
+    text-align: center;
+}
+    
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 17.5%;
+}
+
+
 /* gehele pagina */
+
 body {
     background-color: #f2f2f2;
+    margin-bottom: 125px;
 }
 
   
@@ -59,6 +79,7 @@ h2 {
 }
   
 /* MENU ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* met behulp van tutorial gemaakt en zelf verander!! */
 
 /* > 767px */
 footer .navbar {
@@ -91,7 +112,7 @@ footer .nav-item {
 
 footer .nav-link {
     display: block;
-    padding: 1rem;
+    padding: 10px;
     color: #fff;
     text-align: center;
     text-decoration: none;
