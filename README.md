@@ -2,20 +2,40 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+planning 23-3-2023:
+
+LEREN PROGRAMMEREN: [STARTED]
+- M05.PA.O3 - Feature #01 - Een bonnetje
+  + verder
+  
+ STATISCHE FRONTEND:
+ - CJV 6 
+
+AVO:
+- Softskills Spel
+  + funtion start game 
+  + verder antwoorden boek 
+
+DYNAMISCHE USERINTERFACE:
+- M02.O1 - Buttons 1.0
+  + begin
+  
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 planning 22-3-2023:
 
-LEREN PROGRAMMEREN:
+LEREN PROGRAMMEREN: [STARTED]
 - M05.PA.O3 - Feature #01 - Een bonnetje
   + begin
  
- STATISCHE FRONTEND:
+ STATISCHE FRONTEND: [DONE]
 - MP.O3 - Realiseer mobiele versie
   + verder van gisteren
   
 AVO:
-- Engels eind opdracht, Book Review 
+- Engels eind opdracht, Book Review [DONE]
   + verder pagina 2,3 en 4 
-- Rekenen Domein 4 
+- Rekenen Domein 4 [DONE]
   + 4.4 & 4.5 
 - Softskills Spel
   + coins uitzoeken [DONE] 
