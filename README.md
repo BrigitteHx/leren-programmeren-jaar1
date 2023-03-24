@@ -1,5 +1,17 @@
 # leren-programmeren-jaar1
 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+planning 24-3-2023:
+
+LEREN PROGRAMMEREN: [DONE]
+- M05.PA.O3 - Feature #01 - Een bonnetje
+
+STATISCHE FRONTEND: [DONE]
+- MP.O4 - Vormgeving desktop versie
+- MP.O5 - Realiseer desktop versie
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 planning 23-3-2023:
@@ -9,7 +21,7 @@ LEREN PROGRAMMEREN: [STARTED]
   + verder
   
  STATISCHE FRONTEND:
- - CJV 6 
+ - CJV 6 [DONE]
 
 AVO:
 - Softskills Spel
