@@ -1,17 +1,4 @@
-# klad ijssalong
-
-# def bonneBonnetje(aantalBolletjes):
-#     bonnetje = [{
-#         "----------[Papi Gelato]----------"
-#         f"Bolletjes  {aantalBolletjes}  * 1,10 = {(aantalBolletjes * 1,10)}"
-#         },{
-#         f"Hoorntjes  {AantalHoorntjes}  * 1,25 = {(AantalHoorntjes * 1,25)}"
-#         },{
-#         f"Bakjes     {aantalBakjes}     * 0,75 = {(aantalBakjes * 0,75)}"
-#         },{
-#         f"Totaal                               = {(aantalBolletjes * 1,10 + AantalHoorntjes * 1,25 + aantalBakjes * 0,75)}"
-#         }]
-#     return bonnetje
+# klad ijssalon
 
 # def hoeveelBolletjes(MAXBOLLETJES): #constanten hoeven niet mee geven te worden
 #     functionAantalBolletjes = True
@@ -59,3 +46,9 @@
 #                 else:
 #                     print("Dat ken ik niet.")
 #     return keuzeHoorntjeBakje, aantalBakjes, AantalHoorntjes
+
+
+
+#  -------------------------------------------------------------------------------------------------------------------
+
+

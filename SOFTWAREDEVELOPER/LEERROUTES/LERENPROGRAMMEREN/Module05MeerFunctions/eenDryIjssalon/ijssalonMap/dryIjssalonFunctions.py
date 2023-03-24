@@ -2,78 +2,76 @@
 
 # VARIABELEN -------------------------------------------------------------------------------------------------------------
 
-NEE = ['nee', 'n', 'Nee']
-JA = ['ja', 'j', 'Ja']
-MAXBOLLETJES = 9 # constanten
-BOLLETJESBAKJE = {4, 5, 6, 7, 8}  
-BOLLETJESBEIDE = {1, 2, 3}        
-
-
-HOORNTJE = ['hoorntje', 'Hoorntje', 'h']
-BAKJE = ['bakje', 'Bakje', 'b']
-
+MAXBOLLETJES = 9
 
 # FUNCTIONS -------------------------------------------------------------------------------------------------------------
 
-def hoeveelBolletjes(MAXBOLLETJES): #constanten hoeven niet mee geven te worden
-    functionAantalBolletjes = True
-    while functionAantalBolletjes:
-
+def hoeveelBolletjes():
+    while True:
         aantalBolletjesInput = input("Hoeveel bolletjes zou u graag willen? ")
-
-        # checken voor nummer:
         if not aantalBolletjesInput.isdigit():
             print("Dat ken ik niet.")
-            continue
-        
-        #toevoegen voor return:
-        aantalBolletjes = int(aantalBolletjesInput)
-
-        # checken voor het juiste aantal:
-        if aantalBolletjes >= MAXBOLLETJES:
-            print("Zulke grote porties verkopen wij niet.")
- 
         else:
-            functionAantalBolletjes = False  
-
-    return aantalBolletjes               
+            aantalBolletjes = int(aantalBolletjesInput)
+            if aantalBolletjes >= MAXBOLLETJES:
+                print("Zulke grote porties verkopen wij niet.")
+            else:
+                return aantalBolletjes               
 
 def hoorntjeOfBakje(aantalBolletjes):
-
-        # 4 of meer bolletjes
-    if aantalBolletjes in BOLLETJESBAKJE and aantalBolletjes not in BOLLETJESBEIDE:
-            keuzeHoorntjeBakje = 'bakje'
-            print(f"U heeft {aantalBolletjes} bolletjes dus u krijgt een {keuzeHoorntjeBakje}. ")
-            # kiezenHoorntjeBakje = False
+    if aantalBolletjes > 4:
+        keuzeHoorntjeBakje = 'bakje'
+        print(f"U heeft {aantalBolletjes} bolletjes dus u krijgt een {keuzeHoorntjeBakje}. ")
     else:
-        kiezenHoorntjeBakje = True
-        while kiezenHoorntjeBakje:
-            # 1 t/m 3 bolletjes
-                keuzeHoorntjeBakje = str(input("Wilt u een hoorntje of een bakje? "))
+        while True:
+            keuzeHoorntjeBakje = input("Wilt u een hoorntje of een bakje? ")
+            if keuzeHoorntjeBakje.lower() in ("hoorntje", "bakje"):
+                print(f"Oke, u krijgt {aantalBolletjes} bolletjes in een {keuzeHoorntjeBakje}. ")
+                return keuzeHoorntjeBakje
+            else:
+                print("Dat ken ik niet.")
 
-                # keuze hoorntje bakje
-                if keuzeHoorntjeBakje in HOORNTJE or keuzeHoorntjeBakje in BAKJE:
-                    print(f"Oke, u krijgt {aantalBolletjes} bolletjes in een {keuzeHoorntjeBakje}. ")
-                    kiezenHoorntjeBakje = False
-                else:
-                    print("Dat ken ik niet.")
-    return keuzeHoorntjeBakje
-
-def meerBestellen(JA, NEE):
-    kiezenMeerBestellen = True
-    while kiezenMeerBestellen:
-
-        # keuze meer bestellen
-        meerBestellenInput = str(input("Wilt u nog meer bestellen? "))
-        if meerBestellenInput in JA:
-            kiezenMeerBestellen = False
-        elif meerBestellenInput in NEE: 
+def meerBestellen():
+    while True:
+        meerBestellenInput = input("Wilt u nog meer bestellen? ")
+        if meerBestellenInput.lower() == "ja":
+            return True
+        elif meerBestellenInput.lower() == "nee":
             print("Bedankt en nog een fijne dag verder!")
-            kiezenMeerBestellen = False
-            return False  #stop programma
-
+            return False
         else:
             print("Dat ken ik niet.")
-            kiezenMeerBestellen = True
-    return True  #continue programma
+
+def functionBonnetje(hoorntjes, bakjes, aantalBolletjes):
+    totalH = hoorntjes * 1.25
+    totalBa = bakjes * 0.75
+    totalBo = aantalBolletjes * 1.10
+    totaalAlles = totalH + totalBa + totalBo
+    print("----------[Papi Gelato]----------\n")
+    print(f"Hoorntjes:  {hoorntjes} voor {round(totalH, 2)}")
+    print(f"Bakjes:     {bakjes} voor {round(totalBa, 2)}")
+    print(f"Bolletjes:  {aantalBolletjes} voor {round(totalBo, 2)}\n")
+    print("--------------------------- +")
+    print(f"Totaal:      {round(totaalAlles, 2)}")
+
+def main():
+    doorloopSalon = True
+    totaalAantalBolletjes = 0
+    totaalHoorntjes = 0
+    totaalBakjes = 0
+
+    while doorloopSalon:
+        aantalBolletjes = hoeveelBolletjes()
+        keuzeHoorntjeBakje = hoorntjeOfBakje(aantalBolletjes)
+        totaalAantalBolletjes += aantalBolletjes
+
+        if keuzeHoorntjeBakje == "hoorntje":
+            totaalHoorntjes += 1
+        else:
+            totaalBakjes += 1
+
+        if not meerBestellen():
+            doorloopSalon = False
+
+    functionBonnetje(totaalHoorntjes, totaalBakjes, totaalAantalBolletjes)
 
