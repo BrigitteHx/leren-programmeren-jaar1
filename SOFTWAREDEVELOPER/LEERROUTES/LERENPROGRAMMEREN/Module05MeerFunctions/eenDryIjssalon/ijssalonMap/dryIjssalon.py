@@ -3,6 +3,6 @@
 from dryIjssalonFunctions import *
 
 print("Welkom bijPapi Gelato je mag alle smaken kiezen zolang het maar vanille ijs is.\n")
-main()
+
 
 
